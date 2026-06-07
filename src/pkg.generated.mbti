@@ -1,0 +1,48 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "moonbit_native/wallpaper"
+
+import {
+  "justjavac/platform",
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn apply(WallpaperRequest) -> WallpaperStatus
+
+pub fn apply_current(String, WallpaperMode) -> WallpaperStatus
+
+pub fn supports_platform(@platform.Os) -> Bool
+
+// Errors
+
+// Types and methods
+pub(all) enum WallpaperMode {
+  Fill
+  Fit
+  Stretch
+  Center
+  Span
+} derive(Eq, @debug.Debug)
+pub impl Show for WallpaperMode
+
+pub(all) struct WallpaperRequest {
+  platform : @platform.Os
+  source : String
+  mode : WallpaperMode
+} derive(Eq, @debug.Debug)
+pub impl Show for WallpaperRequest
+
+pub(all) enum WallpaperStatus {
+  Applied
+  UnsupportedPlatform
+  UnsupportedDesktop
+  InvalidSource
+  NativeFailure
+} derive(Eq, @debug.Debug)
+pub fn WallpaperStatus::is_success(Self) -> Bool
+pub impl Show for WallpaperStatus
+
+// Type aliases
+
+// Traits
+

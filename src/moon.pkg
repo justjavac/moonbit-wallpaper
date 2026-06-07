@@ -1,0 +1,10 @@
+import {
+  "justjavac/ffi",
+  "justjavac/platform",
+}
+
+supported_targets = "native"
+
+options(
+  "native-stub": [ "wallpaper_stub.c" ],
+)
