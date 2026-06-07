@@ -1,6 +1,6 @@
 import {
   "justjavac/platform",
-  "moonbit_native/wallpaper",
+  "justjavac/wallpaper",
 }
 
 supported_targets = "native"

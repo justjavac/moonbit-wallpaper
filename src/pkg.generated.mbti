@@ -1,5 +1,5 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "moonbit_native/wallpaper"
+package "justjavac/wallpaper"
 
 import {
   "justjavac/platform",

@@ -1,4 +1,4 @@
-# moonbit_native/wallpaper
+# justjavac/wallpaper
 
 Native-only MoonBit bindings for desktop wallpaper platform APIs. No shell commands are used.
 

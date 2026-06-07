@@ -1,11 +1,11 @@
-# moonbit_native/wallpaper
+# justjavac/wallpaper
 
 [![coverage](https://img.shields.io/codecov/c/github/justjavac/moonbit-wallpaper/main?label=coverage)](https://codecov.io/gh/justjavac/moonbit-wallpaper)
 [![linux](https://img.shields.io/codecov/c/github/justjavac/moonbit-wallpaper/main?flag=linux&label=linux)](https://codecov.io/gh/justjavac/moonbit-wallpaper)
 [![macos](https://img.shields.io/codecov/c/github/justjavac/moonbit-wallpaper/main?flag=macos&label=macos)](https://codecov.io/gh/justjavac/moonbit-wallpaper)
 [![windows](https://img.shields.io/codecov/c/github/justjavac/moonbit-wallpaper/main?flag=windows&label=windows)](https://codecov.io/gh/justjavac/moonbit-wallpaper)
 
-`moonbit_native/wallpaper` is a native-only MoonBit package for applying desktop wallpapers through platform APIs. It does not generate shell commands, run scripts, or call command-line tools. The public API is intentionally small: describe a wallpaper request, apply it, and inspect the returned status.
+`justjavac/wallpaper` is a native-only MoonBit package for applying desktop wallpapers through platform APIs. It does not generate shell commands, run scripts, or call command-line tools. The public API is intentionally small: describe a wallpaper request, apply it, and inspect the returned status.
 
 ## Design
 
@@ -45,13 +45,11 @@ macOS applies the image source. The `WallpaperMode` argument is accepted for API
 
 ## Installation
 
-Add the dependency in `moon.mod.json`:
+Add the dependency in `moon.mod`:
 
-```json
-{
-  "deps": {
-    "moonbit_native/wallpaper": "0.1.0"
-  }
+```moonbit
+import {
+  "justjavac/wallpaper@0.1.2",
 }
 ```
 
@@ -60,7 +58,7 @@ Import the package from `moon.pkg`:
 ```moonbit
 import {
   "justjavac/platform" @platform,
-  "moonbit_native/wallpaper" @wallpaper,
+  "justjavac/wallpaper" @wallpaper,
 }
 ```
 
@@ -191,7 +189,7 @@ Generate coverage:
 
 ```bash
 moon test --target native --enable-coverage
-moon coverage analyze -p moonbit_native/wallpaper -- -f cobertura -o coverage.xml
+moon coverage analyze -p justjavac/wallpaper -- -f cobertura -o coverage.xml
 ```
 
 CI runs native tests on Linux, macOS, and Windows, then uploads one Cobertura XML report per platform to Codecov with the `linux`, `macos`, or `windows` flag. The README keeps one total coverage badge plus one badge per platform.
