@@ -48,6 +48,9 @@ jobs:
       - name: Show MoonBit version
         run: moon version
 
+      - name: Update MoonBit registry
+        run: moon update
+
       - name: Check native package
         run: moon check --target native
 
@@ -55,7 +58,7 @@ jobs:
         run: moon test --target native --enable-coverage
 
       - name: Export Cobertura coverage
-        run: moon coverage analyze -p moonbit_native/wallpaper -- -f cobertura -o "${{ matrix.coverage_file }}"
+        run: moon coverage analyze -p justjavac/wallpaper -- -f cobertura -o "${{ matrix.coverage_file }}"
 
       - name: Upload coverage
         uses: codecov/codecov-action@v5
