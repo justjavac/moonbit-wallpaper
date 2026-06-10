@@ -1,10 +1,10 @@
 name = "justjavac/wallpaper"
 
-version = "0.1.2"
+version = "0.1.3"
 
 import {
-  "justjavac/ffi@0.2.2",
-  "justjavac/platform@0.1.1",
+  "justjavac/ffi@0.2.3",
+  "justjavac/platform@0.1.2",
 }
 
 readme = "README.mbt.md"

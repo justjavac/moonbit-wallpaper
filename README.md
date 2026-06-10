@@ -49,7 +49,7 @@ Add the dependency in `moon.mod`:
 
 ```moonbit
 import {
-  "justjavac/wallpaper@0.1.2",
+  "justjavac/wallpaper@0.1.3",
 }
 ```
 
